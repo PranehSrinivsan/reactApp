@@ -27,6 +27,9 @@ function GetCommits(){
             setAuthorphoto(json.data.author.avatar_url);
             setGetCommits(json.data);
         })
+        .catch((error)=>{
+            console.log("error")
+        });
     },[url,oid,owner,parentid,repository])
 
     return(
